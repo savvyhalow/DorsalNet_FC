@@ -1,1 +1,3 @@
 notebooks/wandb
+notebooks/__pycache__
+code/*.mp4
