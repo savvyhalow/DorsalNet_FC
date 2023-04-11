@@ -1,0 +1,37 @@
+wandb_version: 1
+
+learning_rate:
+  desc: null
+  value: 0.1
+epochs:
+  desc: null
+  value: 50
+experiment:
+  desc: null
+  value: NaturalMovies
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.10
+    cli_version: 0.14.2
+    framework: torch
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    start_time: 1681244927.147565
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.10.10
+      5: 0.14.2
+      8:
+      - 1
+      - 5

@@ -1,0 +1,30 @@
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Configure stats pid to 81037
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/.config/wandb/settings
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/Code/DorsalNet_FC/notebooks/wandb/settings
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-04-11 13:28:47,143 INFO    MainThread:81037 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:_log_setup():507] Logging user logs to /home/matthew/Code/DorsalNet_FC/notebooks/wandb/run-20230411_132847-rsk31zkk/logs/debug.log
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:_log_setup():508] Logging internal logs to /home/matthew/Code/DorsalNet_FC/notebooks/wandb/run-20230411_132847-rsk31zkk/logs/debug-internal.log
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7efadc98efb0>
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:init():547] calling init triggers
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'epochs': 50, 'experiment': 'NaturalMovies'}
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:init():595] starting backend
+2023-04-11 13:28:47,144 INFO    MainThread:81037 [wandb_init.py:init():599] setting up manager
+2023-04-11 13:28:47,145 INFO    MainThread:81037 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-11 13:28:47,147 INFO    MainThread:81037 [wandb_init.py:init():605] backend started and connected
+2023-04-11 13:28:47,154 INFO    MainThread:81037 [wandb_run.py:_label_probe_notebook():1237] probe notebook
+2023-04-11 13:28:47,155 INFO    MainThread:81037 [wandb_run.py:_label_probe_notebook():1247] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-04-11 13:28:47,155 INFO    MainThread:81037 [wandb_init.py:init():695] updated telemetry
+2023-04-11 13:28:47,167 INFO    MainThread:81037 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-04-11 13:28:47,461 INFO    MainThread:81037 [wandb_run.py:_on_init():2176] communicating current version
+2023-04-11 13:28:47,561 INFO    MainThread:81037 [wandb_run.py:_on_init():2185] got version response 
+2023-04-11 13:28:47,561 INFO    MainThread:81037 [wandb_init.py:init():782] starting run threads in backend
+2023-04-11 13:28:50,025 INFO    MainThread:81037 [wandb_run.py:_console_start():2157] atexit reg
+2023-04-11 13:28:50,025 INFO    MainThread:81037 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-04-11 13:28:50,025 INFO    MainThread:81037 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-04-11 13:28:50,025 INFO    MainThread:81037 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-04-11 13:28:50,026 INFO    MainThread:81037 [wandb_init.py:init():824] run started, returning control to user process
