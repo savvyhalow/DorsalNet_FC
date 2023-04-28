@@ -1,0 +1,20 @@
+/home/matthew/.local/lib/python3.10/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+File ~/Code/DorsalNet_FC/code/layer_fitting.py:147
+[1m    145[22m     optimizer [38m=[39m torch[38m.[39moptim[38m.[39mSGD(fc[38m.[39mparameters(), lr[38m=[39mLR_INIT)
+[1m    146[22m [38melif[39m OPTIMIZER[38m.[39mlower() [38m==[39m [38m'adam'[39m:
+--> 147     optimizer [38m=[39m [43mtorch[38m[49m.[39m[43moptim[38m[49m.[39m[43mAdam(fc[38m[49m.[39m[43mparameters(), lr[38m[49m=[39m[43mLR_INIT)
+[1m    148[22m [38melse[39m:
+[1m    149[22m     [38mraise[39m [38mValueError[39m([38mf'Optimizer {[39mOPTIMIZER[38m} not supported.'[39m)
+File ~/.local/lib/python3.10/site-packages/torch/optim/adam.py:18, in Adam.__init__(self, params, lr, betas, eps, weight_decay, amsgrad, foreach, maximize, capturable, differentiable, fused)
+[1m     14[22m [38mdef[39m [38m__init__[39m([38mself[39m, params, lr[38m=1e-3[39m, betas[38m=[39m([38m0.9[39m, [38m0.999[39m), eps[38m=1e-8[39m,
+[1m     15[22m              weight_decay[38m=0[39m, amsgrad[38m=False[39m, [38m*[39m, foreach: Optional[[38mbool[39m] [38m=[39m [38mNone[39m,
+[1m     16[22m              maximize: [38mbool[39m [38m=[39m [38mFalse[39m, capturable: [38mbool[39m [38m=[39m [38mFalse[39m,
+[1m     17[22m              differentiable: [38mbool[39m [38m=[39m [38mFalse[39m, fused: Optional[[38mbool[39m] [38m=[39m [38mNone[39m):
+---> 18     [38mif[39m [38mnot[39m [38m0.0[39m[43m [38m[49m<=[39m[43m lr[49m:
+[1m     19[22m         [38mraise[39m [38mValueError[39m([38m"Invalid learning rate: {}".[39mformat(lr))
+[1m     20[22m     [38mif[39m [38mnot[39m [38m0.0[39m [38m<=[39m eps:
+TypeError: '<=' not supported between instances of 'float' and 'list'
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.

@@ -15,24 +15,24 @@ import wandb
 wandb.login()
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("--model", help="model name", default='DorsalNet', nargs =1, action = 'store')
-parser.add_argument("--experiment", help="experiment name", default='NaturalMovies', nargs =1, action = 'store')
-parser.add_argument("--subject", help="subject id", default='S00', nargs =1, action = 'store')
-parser.add_argument("--opt", help="optimizer", default='adam', nargs =1, action = 'store')
-parser.add_argument("--epochs", help="number of epochs", default=50, nargs =1, action = 'store')
-parser.add_argument("--lr", help="learning rate", default=1e-1, nargs =1, action = 'store')
-parser.add_argument("--gpu", help="cuda device", default='0', nargs =1, action = 'store')
-parser.add_argument("--dtype", help="data type", default='bfloat16', nargs =1, action = 'store')
+parser.add_argument("--model", help="model name", default='DorsalNet', nargs =1, type=str)
+parser.add_argument("--experiment", help="experiment name", default='NaturalMovies', nargs =1, type=str)
+parser.add_argument("--subject", help="subject id", default='S00', nargs =1, type=str)
+parser.add_argument("--opt", help="optimizer", default='adam', nargs =1, type=str)
+parser.add_argument("--epochs", help="number of epochs", default=50, nargs =1, type=int)
+parser.add_argument("--lr", help="learning rate", default=1e-1, nargs =1, type=float)
+parser.add_argument("--gpu", help="cuda device", default='0', nargs =1, type=int)
+parser.add_argument("--dtype", help="data type", default='bfloat16', nargs =1)
 args = parser.parse_args()
 
-MODEL_NAME = args.model
-OPTIMIZER = args.opt
-N_EPOCHS = args.epochs
-LR_INIT = args.lr
-EXPERIMENT = args.experiment
-SUBJECT_ID = args.subject
-DEVICE = f'cuda:{args.gpu}'
-DTYPE = args.dtype
+MODEL_NAME = args.model[0] if isinstance(args.model, list) else args.model
+OPTIMIZER = args.opt[0] if isinstance(args.opt, list) else args.opt
+N_EPOCHS = args.epochs[0] if isinstance(args.epochs, list) else args.epochs
+LR_INIT = args.lr[0] if isinstance(args.lr, list) else args.lr
+EXPERIMENT = args.experiment[0] if isinstance(args.experiment, list) else args.experiment
+SUBJECT_ID = args.subject[0] if isinstance(args.subject, list) else args.subject
+DEVICE = f'cuda:{args.gpu[0] if isinstance(args.gpu, list) else args.gpu}'
+DTYPE = args.dtype[0] if isinstance(args.dtype, list) else args.dtype
 
 run = wandb.init(
     # Set the project where this run will be logged

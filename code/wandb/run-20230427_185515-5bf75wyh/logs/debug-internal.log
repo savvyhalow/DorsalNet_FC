@@ -1,0 +1,191 @@
+2023-04-27 18:55:24,653 INFO    StreamThr :256917 [internal.py:wandb_internal():86] W&B internal server running at pid: 256917, started at: 2023-04-27 18:55:24.652370
+2023-04-27 18:55:24,655 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status
+2023-04-27 18:55:24,658 INFO    WriterThread:256917 [datastore.py:open_for_write():85] open: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/run-5bf75wyh.wandb
+2023-04-27 18:55:24,659 DEBUG   SenderThread:256917 [sender.py:send():375] send: header
+2023-04-27 18:55:24,659 DEBUG   SenderThread:256917 [sender.py:send():375] send: run
+2023-04-27 18:55:25,013 INFO    SenderThread:256917 [dir_watcher.py:__init__():219] watching files in: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files
+2023-04-27 18:55:25,014 INFO    SenderThread:256917 [sender.py:_start_run_threads():1124] run started: 5bf75wyh with start time 1682646923.887186
+2023-04-27 18:55:25,014 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 18:55:25,014 INFO    SenderThread:256917 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 18:55:25,016 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: check_version
+2023-04-27 18:55:25,017 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: check_version
+2023-04-27 18:55:25,113 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: run_start
+2023-04-27 18:55:25,115 DEBUG   HandlerThread:256917 [system_info.py:__init__():31] System info init
+2023-04-27 18:55:25,115 DEBUG   HandlerThread:256917 [system_info.py:__init__():46] System info init done
+2023-04-27 18:55:25,115 INFO    HandlerThread:256917 [system_monitor.py:start():181] Starting system monitor
+2023-04-27 18:55:25,115 INFO    SystemMonitor:256917 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-27 18:55:25,115 INFO    HandlerThread:256917 [system_monitor.py:probe():201] Collecting system info
+2023-04-27 18:55:25,116 INFO    SystemMonitor:256917 [interfaces.py:start():190] Started cpu monitoring
+2023-04-27 18:55:25,117 INFO    SystemMonitor:256917 [interfaces.py:start():190] Started disk monitoring
+2023-04-27 18:55:25,118 INFO    SystemMonitor:256917 [interfaces.py:start():190] Started gpu monitoring
+2023-04-27 18:55:25,118 INFO    SystemMonitor:256917 [interfaces.py:start():190] Started memory monitoring
+2023-04-27 18:55:25,119 INFO    SystemMonitor:256917 [interfaces.py:start():190] Started network monitoring
+2023-04-27 18:55:25,186 DEBUG   HandlerThread:256917 [system_info.py:probe():195] Probing system
+2023-04-27 18:55:25,187 DEBUG   HandlerThread:256917 [system_info.py:_probe_git():180] Probing git
+2023-04-27 18:55:25,201 DEBUG   HandlerThread:256917 [system_info.py:_probe_git():188] Probing git done
+2023-04-27 18:55:25,201 DEBUG   HandlerThread:256917 [system_info.py:probe():240] Probing system done
+2023-04-27 18:55:25,201 DEBUG   HandlerThread:256917 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-46-generic-x86_64-with-glibc2.35', 'python': '3.10.10', 'heartbeatAt': '2023-04-28T01:55:25.186882', 'startedAt': '2023-04-28T01:55:15.867571', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '/home/matthew/Code/DorsalNet_FC/code/layer_fitting.py', 'codePath': 'code/layer_fitting.py', 'git': {'remote': 'git@github.com:savvyhalow/DorsalNet_FC.git', 'commit': '2152839a84b4b1306070bb62bf5b33cf516814d8'}, 'email': 'mshinkle@nevada.unr.edu', 'root': '/home/matthew/Code/DorsalNet_FC', 'host': 'sapolsky', 'username': 'matthew', 'executable': '/home/matthew/anaconda3/envs/DorsalNet_FC/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3.145583333333333, 'min': 1200.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}, {'current': 3.5, 'min': 1200.0, 'max': 4000.0}], 'disk': {'total': 1832.2072448730469, 'used': 833.3698120117188}, 'gpu': 'NVIDIA TITAN X (Pascal)', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA TITAN X (Pascal)', 'memory_total': 12884901888}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.50053024291992}}
+2023-04-27 18:55:25,201 INFO    HandlerThread:256917 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-27 18:55:25,201 INFO    HandlerThread:256917 [system_monitor.py:probe():214] Publishing system info
+2023-04-27 18:55:25,202 DEBUG   HandlerThread:256917 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-27 18:55:25,202 DEBUG   HandlerThread:256917 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-27 18:55:25,202 DEBUG   HandlerThread:256917 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-27 18:55:26,016 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_created():278] file/dir created: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-summary.json
+2023-04-27 18:55:26,016 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_created():278] file/dir created: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/requirements.txt
+2023-04-27 18:55:26,016 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_created():278] file/dir created: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/conda-environment.yaml
+2023-04-27 18:55:27,493 DEBUG   HandlerThread:256917 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-27 18:55:27,494 INFO    HandlerThread:256917 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-27 18:55:27,494 DEBUG   SenderThread:256917 [sender.py:send():375] send: files
+2023-04-27 18:55:27,495 INFO    SenderThread:256917 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-27 18:55:27,505 DEBUG   SenderThread:256917 [sender.py:send():375] send: telemetry
+2023-04-27 18:55:27,505 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 18:55:27,506 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 18:55:27,934 INFO    wandb-upload_0:256917 [upload_job.py:push():137] Uploaded file /tmp/tmp7brppl4swandb/6c2vp8cm-wandb-metadata.json
+2023-04-27 18:55:28,017 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/conda-environment.yaml
+2023-04-27 18:55:28,017 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_created():278] file/dir created: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-metadata.json
+2023-04-27 18:55:29,695 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:30,017 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_created():278] file/dir created: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log
+2023-04-27 18:55:32,018 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log
+2023-04-27 18:55:34,988 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:39,989 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:42,503 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 18:55:42,504 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 18:55:45,578 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:50,579 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:52,029 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log
+2023-04-27 18:55:56,011 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:55:57,032 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/config.yaml
+2023-04-27 18:55:57,504 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 18:55:57,504 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 18:56:01,579 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:56:03,143 DEBUG   SenderThread:256917 [sender.py:send():375] send: telemetry
+2023-04-27 18:56:03,144 DEBUG   SenderThread:256917 [sender.py:send():375] send: exit
+2023-04-27 18:56:03,144 INFO    SenderThread:256917 [sender.py:send_exit():598] handling exit code: 0
+2023-04-27 18:56:03,144 INFO    SenderThread:256917 [sender.py:send_exit():600] handling runtime: 38
+2023-04-27 18:56:03,147 INFO    SenderThread:256917 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 18:56:03,147 INFO    SenderThread:256917 [sender.py:send_exit():606] send defer
+2023-04-27 18:56:03,147 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,148 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-27 18:56:03,148 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,148 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-04-27 18:56:03,148 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 1
+2023-04-27 18:56:03,149 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,149 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-27 18:56:03,149 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,150 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-04-27 18:56:03,150 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 2
+2023-04-27 18:56:03,150 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,150 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-27 18:56:03,150 INFO    HandlerThread:256917 [system_monitor.py:finish():190] Stopping system monitor
+2023-04-27 18:56:03,151 DEBUG   SystemMonitor:256917 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-27 18:56:03,151 DEBUG   SystemMonitor:256917 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-27 18:56:03,151 DEBUG   SystemMonitor:256917 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-27 18:56:03,155 INFO    HandlerThread:256917 [interfaces.py:finish():202] Joined cpu monitor
+2023-04-27 18:56:03,155 INFO    HandlerThread:256917 [interfaces.py:finish():202] Joined disk monitor
+2023-04-27 18:56:03,248 INFO    HandlerThread:256917 [interfaces.py:finish():202] Joined gpu monitor
+2023-04-27 18:56:03,248 INFO    HandlerThread:256917 [interfaces.py:finish():202] Joined memory monitor
+2023-04-27 18:56:03,249 INFO    HandlerThread:256917 [interfaces.py:finish():202] Joined network monitor
+2023-04-27 18:56:03,250 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,250 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-04-27 18:56:03,250 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 3
+2023-04-27 18:56:03,250 DEBUG   SenderThread:256917 [sender.py:send():375] send: stats
+2023-04-27 18:56:03,250 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,251 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-27 18:56:03,251 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,251 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-04-27 18:56:03,251 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 4
+2023-04-27 18:56:03,252 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,252 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-27 18:56:03,252 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,252 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-04-27 18:56:03,252 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 5
+2023-04-27 18:56:03,252 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,253 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-27 18:56:03,253 DEBUG   SenderThread:256917 [sender.py:send():375] send: summary
+2023-04-27 18:56:03,253 INFO    SenderThread:256917 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 18:56:03,254 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,254 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-04-27 18:56:03,254 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 6
+2023-04-27 18:56:03,254 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,254 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-27 18:56:03,254 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,255 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-04-27 18:56:03,260 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 18:56:03,526 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 7
+2023-04-27 18:56:03,527 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:03,527 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-27 18:56:03,527 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:03,527 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-04-27 18:56:04,036 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 8
+2023-04-27 18:56:04,037 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:04,037 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-summary.json
+2023-04-27 18:56:04,037 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-27 18:56:04,038 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log
+2023-04-27 18:56:04,038 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:04,039 INFO    Thread-26 :256917 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/config.yaml
+2023-04-27 18:56:04,039 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-04-27 18:56:04,057 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 9
+2023-04-27 18:56:04,058 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:04,058 DEBUG   SenderThread:256917 [sender.py:send():375] send: artifact
+2023-04-27 18:56:04,058 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-27 18:56:04,144 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 18:56:04,601 INFO    SenderThread:256917 [sender.py:send_artifact():1474] sent artifact job-git_github.com_savvyhalow_DorsalNet_FC.git_code_layer_fitting.py - {'id': 'QXJ0aWZhY3Q6NDM1Mjk0ODU5', 'digest': '28169f8c4f81a12a34fb945007e731ae', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-git_github.com_savvyhalow_DorsalNet_FC.git_code_layer_fitting.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-git_github.com_savvyhalow_DorsalNet_FC.git_code_layer_fitting.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY1MDc0ODQy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDM1Mjk0ODU5', 'versionIndex': 1}}, 'version': 'v1'}
+2023-04-27 18:56:04,601 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:04,601 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-04-27 18:56:04,601 INFO    SenderThread:256917 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-27 18:56:05,040 INFO    SenderThread:256917 [dir_watcher.py:finish():395] scan: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files
+2023-04-27 18:56:05,040 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/config.yaml config.yaml
+2023-04-27 18:56:05,041 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/conda-environment.yaml conda-environment.yaml
+2023-04-27 18:56:05,041 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/requirements.txt requirements.txt
+2023-04-27 18:56:05,047 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-summary.json wandb-summary.json
+2023-04-27 18:56:05,057 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-metadata.json wandb-metadata.json
+2023-04-27 18:56:05,058 INFO    SenderThread:256917 [dir_watcher.py:finish():409] scan save: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log output.log
+2023-04-27 18:56:05,058 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 10
+2023-04-27 18:56:05,059 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 18:56:05,063 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:05,068 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-27 18:56:05,070 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:05,070 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-04-27 18:56:05,070 INFO    SenderThread:256917 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-27 18:56:05,145 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 18:56:05,145 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 18:56:05,432 INFO    wandb-upload_0:256917 [upload_job.py:push():137] Uploaded file /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/config.yaml
+2023-04-27 18:56:05,502 INFO    wandb-upload_1:256917 [upload_job.py:push():137] Uploaded file /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/conda-environment.yaml
+2023-04-27 18:56:05,549 INFO    wandb-upload_2:256917 [upload_job.py:push():137] Uploaded file /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/requirements.txt
+2023-04-27 18:56:05,567 INFO    wandb-upload_4:256917 [upload_job.py:push():137] Uploaded file /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/output.log
+2023-04-27 18:56:05,568 INFO    wandb-upload_3:256917 [upload_job.py:push():137] Uploaded file /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/files/wandb-summary.json
+2023-04-27 18:56:05,768 INFO    Thread-25 (_thread_body):256917 [sender.py:transition_state():626] send defer: 11
+2023-04-27 18:56:05,769 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:05,769 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-27 18:56:05,770 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:05,770 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-04-27 18:56:05,770 INFO    SenderThread:256917 [file_pusher.py:join():173] waiting for file pusher
+2023-04-27 18:56:05,770 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 12
+2023-04-27 18:56:05,771 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:05,771 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-27 18:56:05,771 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:05,771 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-04-27 18:56:05,953 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 13
+2023-04-27 18:56:05,953 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:05,954 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-27 18:56:05,954 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:05,954 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-04-27 18:56:05,954 INFO    SenderThread:256917 [sender.py:transition_state():626] send defer: 14
+2023-04-27 18:56:05,955 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 18:56:05,955 INFO    HandlerThread:256917 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-27 18:56:05,955 DEBUG   SenderThread:256917 [sender.py:send():375] send: final
+2023-04-27 18:56:05,956 DEBUG   SenderThread:256917 [sender.py:send():375] send: footer
+2023-04-27 18:56:05,956 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: defer
+2023-04-27 18:56:05,956 INFO    SenderThread:256917 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-04-27 18:56:05,957 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 18:56:05,958 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: server_info
+2023-04-27 18:56:05,958 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 18:56:05,958 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-27 18:56:05,959 DEBUG   SenderThread:256917 [sender.py:send_request():402] send_request: server_info
+2023-04-27 18:56:05,959 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-27 18:56:06,038 DEBUG   HandlerThread:256917 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-27 18:56:06,038 INFO    HandlerThread:256917 [handler.py:finish():845] shutting down handler
+2023-04-27 18:56:06,959 INFO    WriterThread:256917 [datastore.py:close():298] close: /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185515-5bf75wyh/run-5bf75wyh.wandb
+2023-04-27 18:56:07,037 INFO    SenderThread:256917 [sender.py:finish():1550] shutting down sender
+2023-04-27 18:56:07,038 INFO    SenderThread:256917 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-27 18:56:07,038 INFO    SenderThread:256917 [file_pusher.py:join():173] waiting for file pusher

@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+File ~/Code/DorsalNet_FC/code/layer_fitting.py:53
+[1m     50[22m DTYPE [38m=[39m torch[38m.[39mbfloat16
+[1m     52[22m [38mif[39m MODEL_NAME [38m==[39m [38m'DorsalNet'[39m:
+---> 53     model [38m=[39m [43mDorsalNet([38m[49mFalse[39m[43m, [38m[49m32[39m[43m)[38m[49m.[39m[43meval()[38m[49m.[39m[43mto(DEVICE)[38m[49m.[39mto(DTYPE)
+[1m     54[22m     model[38m.[39mload_state_dict(torch[38m.[39mload([38m'/home/matthew/Data/DorsalNet_FC/base_models/DorsalNet/pretrained.pth'[39m))
+[1m     55[22m [38melif[39m MODEL_NAME [38m==[39m [38m'alexnet'[39m:
+File ~/.local/lib/python3.10/site-packages/torch/nn/modules/module.py:1126, in Module.to(self, *args, **kwargs)
+[1m   1039[22m [38mdef[39m [38mto[39m([38mself[39m, [38m*[39margs, [38m**[39mkwargs):
+[1m   1040[22m     [38mr"""Moves and/or casts the parameters and buffers.
+[1m   1041
+[1m   1042[22m [38m    This can be called as
+   (...)
+[1m   1123
+[1m   1124[22m [38m    """
+-> 1126     device, dtype, non_blocking, convert_to_format [38m=[39m [43mtorch[38m[49m.[39m[43m_C[38m[49m.[39m[43m_nn[38m[49m.[39m[43m_parse_to([38m[49m*[39m[43margs, [38m[49m**[39m[43mkwargs)
+[1m   1128[22m     [38mif[39m dtype [38mis[39m [38mnot[39m [38mNone[39m:
+[1m   1129[22m         [38mif[39m [38mnot[39m (dtype[38m.[39mis_floating_point [38mor[39m dtype[38m.[39mis_complex):
+RuntimeError: Invalid device string: 'cuda:['0']'
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.

@@ -1,0 +1,63 @@
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Configure stats pid to 256895
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/.config/wandb/settings
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/Code/DorsalNet_FC/code/wandb/settings
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'code/layer_fitting.py', 'program': '/home/matthew/Code/DorsalNet_FC/code/layer_fitting.py'}
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_init.py:_log_setup():507] Logging user logs to /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185603-q5025cqp/logs/debug.log
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_init.py:_log_setup():508] Logging internal logs to /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185603-q5025cqp/logs/debug-internal.log
+2023-04-27 18:56:03,141 INFO    MainThread:256895 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f33f058d330>
+2023-04-27 18:56:03,142 INFO    MainThread:256895 [wandb_init.py:init():547] calling init triggers
+2023-04-27 18:56:03,142 INFO    MainThread:256895 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'model_name': 'D', 'experiment': 'N', 'subject_id': 'S', 'optimizer': 'adam', 'epochs': 50, 'learning_rate': ['.1']}
+2023-04-27 18:56:03,142 INFO    MainThread:256895 [wandb_init.py:init():571] re-initializing run, found existing run on stack: 5bf75wyh
+2023-04-27 18:56:03,142 INFO    MainThread:256895 [wandb_run.py:_finish():1892] finishing run mshinkle/DorsalNet_FC_Pilot/5bf75wyh
+2023-04-27 18:56:03,142 INFO    MainThread:256895 [wandb_run.py:_atexit_cleanup():2126] got exitcode: 0
+2023-04-27 18:56:03,143 INFO    MainThread:256895 [wandb_run.py:_restore():2109] restore
+2023-04-27 18:56:03,143 INFO    MainThread:256895 [wandb_run.py:_restore():2115] restore done
+2023-04-27 18:56:07,041 INFO    MainThread:256895 [wandb_run.py:_footer_history_summary_info():3476] rendering history
+2023-04-27 18:56:07,041 INFO    MainThread:256895 [wandb_run.py:_footer_history_summary_info():3508] rendering summary
+2023-04-27 18:56:07,047 INFO    MainThread:256895 [wandb_run.py:_footer_sync_info():3434] logging synced files
+2023-04-27 18:56:07,099 INFO    MainThread:256895 [wandb_init.py:init():595] starting backend
+2023-04-27 18:56:07,099 INFO    MainThread:256895 [wandb_init.py:init():599] setting up manager
+2023-04-27 18:56:07,101 INFO    MainThread:256895 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-27 18:56:07,103 INFO    MainThread:256895 [wandb_init.py:init():605] backend started and connected
+2023-04-27 18:56:07,105 INFO    MainThread:256895 [wandb_run.py:_label_probe_notebook():1237] probe notebook
+2023-04-27 18:56:07,105 INFO    MainThread:256895 [wandb_run.py:_label_probe_notebook():1247] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-04-27 18:56:07,105 INFO    MainThread:256895 [wandb_init.py:init():695] updated telemetry
+2023-04-27 18:56:07,114 INFO    MainThread:256895 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-04-27 18:56:08,375 INFO    MainThread:256895 [wandb_run.py:_on_init():2176] communicating current version
+2023-04-27 18:56:08,535 INFO    MainThread:256895 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.15.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-27 18:56:08,535 INFO    MainThread:256895 [wandb_init.py:init():782] starting run threads in backend
+2023-04-27 18:56:10,824 INFO    MainThread:256895 [wandb_run.py:_console_start():2157] atexit reg
+2023-04-27 18:56:10,824 INFO    MainThread:256895 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-04-27 18:56:10,824 INFO    MainThread:256895 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-04-27 18:56:10,824 INFO    MainThread:256895 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-04-27 18:56:10,825 INFO    MainThread:256895 [wandb_init.py:init():824] run started, returning control to user process
+2023-04-27 18:56:11,007 INFO    MainThread:256895 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-04-27 18:56:11,007 INFO    MainThread:256895 [wandb_init.py:_pause_backend():418] pausing backend
+2023-04-27 18:56:42,418 INFO    MainThread:256895 [wandb_init.py:_resume_backend():423] resuming backend
+2023-04-27 18:56:42,426 INFO    MainThread:256895 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-04-27 18:56:42,426 INFO    MainThread:256895 [wandb_init.py:_pause_backend():418] pausing backend
+2023-04-27 18:57:09,524 INFO    MainThread:256895 [wandb_init.py:_resume_backend():423] resuming backend
+2023-04-27 18:57:09,535 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Configure stats pid to 256895
+2023-04-27 18:57:09,535 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/.config/wandb/settings
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from /home/matthew/Code/DorsalNet_FC/code/wandb/settings
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'code/layer_fitting.py', 'program': '/home/matthew/Code/DorsalNet_FC/code/layer_fitting.py'}
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_init.py:_log_setup():507] Logging user logs to /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185709-s2p76p21/logs/debug.log
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_init.py:_log_setup():508] Logging internal logs to /home/matthew/Code/DorsalNet_FC/code/wandb/run-20230427_185709-s2p76p21/logs/debug-internal.log
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_init.py:init():547] calling init triggers
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'model_name': 'DorsalNet', 'experiment': 'NaturalMovies', 'subject_id': 'S00', 'optimizer': 'adam', 'epochs': 50, 'learning_rate': ['.1']}
+2023-04-27 18:57:09,536 INFO    MainThread:256895 [wandb_init.py:init():571] re-initializing run, found existing run on stack: q5025cqp
+2023-04-27 18:57:09,537 INFO    MainThread:256895 [wandb_run.py:_finish():1892] finishing run mshinkle/DorsalNet_FC_Pilot/q5025cqp
+2023-04-27 18:57:09,537 ERROR   MainThread:256895 [jupyter.py:save_history():437] Run pip install nbformat to save notebook history
+2023-04-27 18:57:09,537 INFO    MainThread:256895 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-04-27 18:57:09,537 INFO    MainThread:256895 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-04-27 18:57:09,537 INFO    MainThread:256895 [wandb_run.py:_atexit_cleanup():2126] got exitcode: 0
+2023-04-27 18:57:09,538 INFO    MainThread:256895 [wandb_run.py:_restore():2109] restore
+2023-04-27 18:57:09,538 INFO    MainThread:256895 [wandb_run.py:_restore():2115] restore done
+2023-04-27 18:57:15,638 INFO    MainThread:256895 [wandb_run.py:_footer_history_summary_info():3476] rendering history
+2023-04-27 18:57:15,639 INFO    MainThread:256895 [wandb_run.py:_footer_history_summary_info():3508] rendering summary
+2023-04-27 18:57:15,643 INFO    MainThread:256895 [wandb_run.py:_footer_sync_info():3434] logging synced files

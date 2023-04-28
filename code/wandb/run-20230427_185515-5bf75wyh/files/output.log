@@ -1,0 +1,25 @@
+/home/matthew/.local/lib/python3.10/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+File ~/Code/DorsalNet_FC/code/layer_fitting.py:144
+[1m    138[22m val_dl [38m=[39m DataLoader(
+[1m    139[22m     SingleImageFolder([38mf'/home/matthew/Data/DorsalNet_FC/stimuli/{[39mEXPERIMENT[38m}/images/val'[39m, transform[38m=[39mpreprocess),
+[1m    140[22m     batch_size[38m=[39mbatch_sizes[EXPERIMENT],
+[1m    141[22m     shuffle[38m=False[39m)
+[1m    143[22m torch[38m.[39mcuda[38m.[39mempty_cache()
+--> 144 [38mif[39m [43mOPTIMIZER[38m[49m.[39m[43mlower[49m() [38m==[39m [38m'sgd'[39m:
+[1m    145[22m     optimizer [38m=[39m torch[38m.[39moptim[38m.[39mSGD(fc[38m.[39mparameters(), lr[38m=[39mLR_INIT)
+[1m    146[22m [38melif[39m OPTIMIZER[38m.[39mlower() [38m==[39m [38m'adam'[39m:
+AttributeError: 'list' object has no attribute 'lower'
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+File ~/Code/DorsalNet_FC/code/layer_fitting.py:30
+[1m     28[22m MODEL_NAME [38m=[39m args[38m.[39mmodel[[38m0[39m]
+[1m     29[22m OPTIMIZER [38m=[39m args[38m.[39mopt[[38m0[39m]
+---> 30 N_EPOCHS [38m=[39m [43margs[38m[49m.[39m[43mepochs[[38m[49m0[39m[43m]
+[1m     31[22m LR_INIT [38m=[39m args[38m.[39mlr[[38m0[39m]
+[1m     32[22m EXPERIMENT [38m=[39m args[38m.[39mexperiment[[38m0[39m]
+TypeError: 'int' object is not subscriptable
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.

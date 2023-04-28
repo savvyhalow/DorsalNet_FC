@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+File ~/Code/DorsalNet_FC/code/layer_fitting.py:73
+[1m     70[22m         max_output_dim [38m=[39m [38mint[39m((max_fs [38m/[39m num_channels)[38m**[39m([38m1/3[39m))
+[1m     71[22m         [38mreturn[39m torch[38m.[39mnn[38m.[39mAdaptiveMaxPool3d(max_output_dim)
+---> 73 layers_dict [38m=[39m iterate_children([43mmodel[49m, depth[38m=[39mDEPTH)
+[1m     74[22m layers_dict [38m=[39m {layer_name: ds_function [38mfor[39m layer_name, ds_function [38min[39m layers_dict[38m.[39mitems() [38mif[39m [38m'dropout'[39m [38mnot[39m [38min[39m layer_name [38mand[39m [38m'concat'[39m [38mnot[39m [38min[39m layer_name}
+[1m     75[22m model [38m=[39m hook_model(model, layers_dict)
+NameError: name 'model' is not defined
+'D'
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
