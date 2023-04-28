@@ -166,9 +166,9 @@ val_dl = DataLoader(
     shuffle=False)
 
 torch.cuda.empty_cache()
-if OPTIMIZER == 'SGD':
+if OPTIMIZER.lower() == 'sgd':
     optimizer = torch.optim.SGD(fc.parameters(), lr=LR_INIT)
-elif OPTIMIZER == 'Adam':
+elif OPTIMIZER.lower() == 'adam':
     optimizer = torch.optim.Adam(fc.parameters(), lr=LR_INIT)
 
 def train():
