@@ -49,17 +49,42 @@ run = wandb.init(
 
 DTYPE = torch.bfloat16
 
-if MODEL_NAME == 'DorsalNet':
+if MODEL_NAME.lower() == 'dorsalnet':
+    DEPTH = 1
+    INPUT_SIZE = (1, 3, 32, 112, 112)
+    preprocess = tf.Compose([
+        tf.Resize(112),
+        tf.ToTensor(),
+    ])
+    image_augmentations = tf.Compose([
+        tf.RandomCrop(112, padding=4),
+        tf.RandomRotation(10),
+        tf.RandomCrop(112, padding=3),
+    ])
     model = DorsalNet(False, 32).eval().to(DEVICE).to(DTYPE)
     model.load_state_dict(torch.load('/home/matthew/Data/DorsalNet_FC/base_models/DorsalNet/pretrained.pth'))
-elif MODEL_NAME == 'alexnet':
-    model = torch.hub.load('pytorch/vision:v0.6.0', 'alexnet', pretrained=True).eval().to(DEVICE).to(DTYPE)
-elif MODEL_NAME == 'inception_v3':
-    model = torch.hub.load('pytorch/vision:v0.6.0', 'inception_v3', pretrained=True).eval().to(DEVICE).to(DTYPE)
-### Choose downsampling
+else:
+    DEPTH = 2
+    INPUT_SIZE = (1, 3, 224, 224)
+    preprocess = tf.Compose([
+        tf.Resize(256),
+        tf.CenterCrop(224),
+        tf.ToTensor(),
+        tf.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225]),
+    ])
+    image_augmentations = tf.Compose([
+        tf.RandomCrop(224, padding=4),
+        tf.RandomRotation(10),
+        tf.RandomCrop(224, padding=3),
+    ])
+    if MODEL_NAME.lower() == 'alexnet':
+        model = torch.hub.load('pytorch/vision:v0.6.0', 'alexnet', pretrained=True).eval().to(DEVICE).to(DTYPE)
+    elif MODEL_NAME.lower() == 'inception_v3':
+        model = torch.hub.load('pytorch/vision:v0.6.0', 'inception_v3', pretrained=True).eval().to(DEVICE).to(DTYPE)
+    elif MODEL_NAME.lower() == 'vgg16':
+        model = torch.hub.load('pytorch/vision:v0.6.0', 'vgg16', pretrained=True).eval().to(DEVICE).to(DTYPE)
+
 MAX_FS = 5000
-DEPTH = 1
-input_size = (1, 3, 32, 112, 112)
 
 def choose_downsampling(activations, max_fs):
     num_channels = activations.shape[1]
@@ -73,7 +98,7 @@ def choose_downsampling(activations, max_fs):
 layers_dict = iterate_children(model, depth=DEPTH)
 layers_dict = {layer_name: ds_function for layer_name, ds_function in layers_dict.items() if 'dropout' not in layer_name and 'concat' not in layer_name}
 model = hook_model(model, layers_dict)
-model(torch.randn(input_size).to(DEVICE).to(DTYPE))
+model(torch.randn(INPUT_SIZE).to(DEVICE).to(DTYPE))
 
 layer_downsampling_fns = {}
 for layer_name, layer_activations in model.activations.items():
@@ -141,20 +166,19 @@ val_dl = DataLoader(
     shuffle=False)
 
 torch.cuda.empty_cache()
-if OPTIMIZER.lower() == 'sgd':
+if OPTIMIZER == 'SGD':
     optimizer = torch.optim.SGD(fc.parameters(), lr=LR_INIT)
-elif OPTIMIZER.lower() == 'adam':
+elif OPTIMIZER == 'Adam':
     optimizer = torch.optim.Adam(fc.parameters(), lr=LR_INIT)
-else:
-    raise ValueError(f'Optimizer {OPTIMIZER} not supported.')
 
 def train():
     pbar = tqdm(enumerate(trn_dl), total=len(trn_brain), desc=f"Epoch {epoch} Training")
     trn_epoch_losses = []
     for i, batch in pbar:
         optimizer.zero_grad()
-        batch = interpolate_frames(batch, input_size[2])
-        model.forward(image_augmentations(batch).unsqueeze(0).to(DTYPE).to(DEVICE))
+        if MODEL_NAME.lower() == 'DorsalNet':
+            batch = interpolate_frames(batch, INPUT_SIZE[2]).unsqueeze(0)
+        model.forward(image_augmentations(batch).to(DTYPE).to(DEVICE))
         all_activations = []
         for layer_name, layer_activations in model.activations.items():
             layer_downsampling_fn = layer_downsampling_fns[layer_name]
@@ -177,8 +201,9 @@ def validate():
         val_outputs = []
         val_epoch_losses = []
         for i, batch in pbar:
-            batch = interpolate_frames(batch, input_size[2])
-            model.forward(batch.unsqueeze(0).to(DTYPE).to(DEVICE))
+            if MODEL_NAME.lower() == 'DorsalNet':
+                batch = interpolate_frames(batch, INPUT_SIZE[2]).unsqueeze(0)
+            model.forward(batch.unsqueeze(DTYPE).to(DEVICE))
             all_activations = []
             for layer_name, layer_activations in model.activations.items():
                 layer_downsampling_fn = layer_downsampling_fns[layer_name]
@@ -195,6 +220,17 @@ def validate():
         ccs = column_corr(np.concatenate(val_outputs), val_brain.cpu().numpy())
         print(f"Mean Prediction Accuracy: {ccs.mean():.2f}")
     return val_epoch_losses, ccs
+        
+def log(epoch, trn_epoch_losses, val_epoch_losses, ccs):
+    wandb.log({
+        "epoch": epoch,
+        "trn_loss": torch.mean(torch.tensor(trn_epoch_losses)).item(),
+        "val_loss": torch.mean(torch.tensor(val_epoch_losses)).item(),
+        "val_acc": ccs.mean(),
+    })
+
+save_dir = f'/home/matthew/Data/DorsalNet_FC/fits/{EXPERIMENT}/{SUBJECT_ID}'
+os.makedirs(save_dir, exist_ok=True)
         
 def log(epoch, trn_epoch_losses, val_epoch_losses, ccs):
     wandb.log({
