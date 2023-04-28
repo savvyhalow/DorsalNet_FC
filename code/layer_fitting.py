@@ -15,14 +15,14 @@ import wandb
 wandb.login()
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("-model", help="model name", default='DorsalNet')
-parser.add_argument("-experiment", help="experiment name", default='NaturalMovies')
-parser.add_argument("-subject", help="subject id", default='S00')
-parser.add_argument("-opt", help="optimizer", default='adam')
-parser.add_argument("-epochs", help="number of epochs", default=50)
-parser.add_argument("-lr", help="learning rate", default=1e-1)
-parser.add_argument("-gpu", help="cuda device", default='0')
-parser.add_argument("-dtype", help="data type", default='bfloat16')
+parser.add_argument("--model", help="model name", default='DorsalNet', nargs =1, action = 'store')
+parser.add_argument("--experiment", help="experiment name", default='NaturalMovies', nargs =1, action = 'store')
+parser.add_argument("--subject", help="subject id", default='S00', nargs =1, action = 'store')
+parser.add_argument("--opt", help="optimizer", default='adam', nargs =1, action = 'store')
+parser.add_argument("--epochs", help="number of epochs", default=50, nargs =1, action = 'store')
+parser.add_argument("--lr", help="learning rate", default=1e-1, nargs =1, action = 'store')
+parser.add_argument("--gpu", help="cuda device", default='0', nargs =1, action = 'store')
+parser.add_argument("--dtype", help="data type", default='bfloat16', nargs =1, action = 'store')
 args = parser.parse_args()
 
 MODEL_NAME = args.model
@@ -141,10 +141,12 @@ val_dl = DataLoader(
     shuffle=False)
 
 torch.cuda.empty_cache()
-if OPTIMIZER == 'SGD':
+if OPTIMIZER.lower() == 'sgd':
     optimizer = torch.optim.SGD(fc.parameters(), lr=LR_INIT)
-elif OPTIMIZER == 'Adam':
+elif OPTIMIZER.lower() == 'adam':
     optimizer = torch.optim.Adam(fc.parameters(), lr=LR_INIT)
+else:
+    raise ValueError(f'Optimizer {OPTIMIZER} not supported.')
 
 def train():
     pbar = tqdm(enumerate(trn_dl), total=len(trn_brain), desc=f"Epoch {epoch} Training")
